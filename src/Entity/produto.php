@@ -39,6 +39,7 @@ class produto
 
     /**
      * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      * @ORM\Column(type="text",name="idProduto")
      */
     private $idProduto;
