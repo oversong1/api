@@ -17,7 +17,7 @@ use Doctrine\ORM\Id\AbstractIdGenerator;
 * @ApiResource(
 
  *     normalizationContext  ={"groups"={"produto_read"}},
- *     denormalizationContext={"groups"={"produto__write"}},
+ *     denormalizationContext={"groups"={"produto_write"}},
  *     collectionOperations  ={
  *          "get"              ={
  *            "access_control"="is_granted('ROLE_CLIENT')",
