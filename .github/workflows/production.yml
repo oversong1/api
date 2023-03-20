@@ -17,6 +17,6 @@ jobs:
           script: |
                   cd ~/api.codesize.com.br/
                   git checkout main 
-                  git pull origin production             
+                  git pull origin main             
                   php composer.phar install --no-suggest
                   php bin/console doctrine:migrations:migrate --no-interaction                  
