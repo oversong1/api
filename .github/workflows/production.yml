@@ -10,6 +10,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: api.codesize.com.br
+          use_insecure_cipher: true
           username: codesi80
           key: ${{ secrets.CODESIZE }}
           port: 22        
