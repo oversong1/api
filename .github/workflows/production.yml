@@ -1,0 +1,21 @@
+name: Deploy Project
+on:
+  push:
+    branches: [ production ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:        
+      - name: Update Codesize
+        uses: appleboy/ssh-action@master
+        with:
+          host: api.codesize.com.br
+          username: codesi80
+          key: ${{ secrets.CODESIZE }}
+          port: 22        
+          script: |
+                  cd ~/api.codesize.com.br/
+                  git checkout main 
+                  git pull origin production             
+                  composer install --no-suggest
+                  php bin/console doctrine:migrations:migrate --no-interaction                  
