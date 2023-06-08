@@ -33,6 +33,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 #[Put(
     normalizationContext:['groups' => ['user_read']],
     denormalizationContext:['groups' => ['user_write']],
+    
 )]
 #[Patch()]
 #[Delete()]
