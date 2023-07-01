@@ -66,6 +66,7 @@ class Produtos
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['produtos_read'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 55, nullable: true)]
